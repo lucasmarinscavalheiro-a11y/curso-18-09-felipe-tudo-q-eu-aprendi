@@ -1,0 +1,249 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --azul-noite: #071b3a;
+  --azul: #0b3d91;
+  --azul-claro: #e9f1ff;
+  --dourado: #f2b84b;
+  --texto: #182238;
+  --branco: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 1100px;
+  min-height: 100vh;
+  margin: auto;
+  background: linear-gradient(135deg, #071b3a 0%, #0d4c8d 48%, #f2b84b 190%);
+  color: var(--texto);
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  padding: 24px;
+}
+
+header {
+  position: relative;
+  overflow: hidden;
+  padding: 46px 32px 30px;
+  background: linear-gradient(120deg, var(--azul-noite), var(--azul));
+  color: var(--branco);
+  text-align: center;
+  border-bottom: 4px solid var(--dourado);
+  box-shadow: 0 18px 35px #04132966;
+}
+
+header::after {
+  content: "10";
+  position: absolute;
+  right: 28px;
+  bottom: -42px;
+  color: #ffffff12;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 170px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+header h1 {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 18px;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 46px;
+  letter-spacing: 1px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+nav {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+nav a {
+  padding: 7px 16px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border: 1px solid #ffffff55;
+  border-radius: 999px;
+  transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  background: var(--dourado);
+  color: var(--azul-noite);
+  transform: translateY(-2px);
+}
+
+.menu-toggle {
+  display: none;
+}
+
+section {
+  margin: 24px 0;
+  padding: 32px;
+  background: var(--branco);
+  border-left: 6px solid var(--dourado);
+  box-shadow: 0 14px 30px #04132930;
+}
+
+h2 {
+  margin-top: 0;
+  color: var(--azul);
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 34px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+section > p {
+  max-width: 700px;
+}
+
+img {
+  width: 70%;
+  max-width: 560px;
+  height: auto;
+  display: block;
+  margin: 15px auto 0;
+  border: 8px solid var(--azul-claro);
+  box-shadow: 0 10px 20px #071b3a26;
+}
+
+li {
+  margin: 10px 0;
+  padding: 8px 12px;
+  max-width: 360px;
+  background: var(--azul-claro);
+  border-left: 3px solid var(--dourado);
+  list-style: none;
+  font-weight: 500;
+}
+
+ul {
+  padding: 0;
+}
+
+.opcoes-quiz {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.resposta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 78px;
+  padding: 10px 14px;
+  border: 2px solid #d6e0ef;
+  background: var(--branco);
+  color: var(--texto);
+  font: inherit;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 180ms ease, background 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.resposta img {
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  margin: 0;
+  padding: 3px;
+  object-fit: contain;
+  border: 0;
+  box-shadow: none;
+}
+
+.resposta:hover,
+.resposta:focus-visible {
+  border-color: var(--azul);
+  transform: translateY(-3px);
+}
+
+.resposta:hover,
+.resposta.certa {
+  background: var(--azul);
+  color: white;
+}
+
+.resposta.errada {
+  background: #6b2737;
+  color: white;
+}
+
+#resultado {
+  min-height: 28px;
+  margin-bottom: 0;
+  color: #168447;
+  font-weight: bold;
+}
+
+footer {
+  padding: 22px;
+  background: var(--azul-noite);
+  color: white;
+  text-align: center;
+  border-top: 4px solid var(--dourado);
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 22px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+    padding: 10px;
+  }
+
+  header {
+    padding: 34px 18px 24px;
+  }
+
+  header h1 {
+    font-size: 38px;
+  }
+
+  .menu-toggle {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 8px;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav.aberto {
+    display: flex;
+  }
+
+  section {
+    margin: 10px;
+    padding: 24px 18px;
+  }
+
+  section > img {
+    width: 100%;
+  }
+
+  .opcoes-quiz {
+    grid-template-columns: 1fr;
+  }
+}

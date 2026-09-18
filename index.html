@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neymar JR.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js?v=2" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Neymar JR, o Ídolo Geracional</h1>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav id="menu">
+      <a href="#inicio">Início</a>
+      <a href="#temporada">Temporada</a>
+      <a href="#quiz">Quiz</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio">
+      <h2>Neymar na temporada 2026</h2>
+      <p>Neymar é o ídolo de uma nação. e apesar das lesões, vem se destacando pelo Santos FC.</p>
+      <img src="https://static.gazetaesportiva.com/uploads/2026/01/54952813879_b45a5a3f21_o-1.webp" alt="Neymar jogando futebol">
+    </section>
+
+    <section id="temporada">
+      <h2>Números</h2>
+      <p>Na atual temporada, o neymar tem os seguintes números:</p>
+      <ul>
+        <li>Jogos: 21</li>
+        <li>Gols: 8</li>
+        <li>Assistências: 6</li>
+      </ul>
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhcnvt3OQk1xJoAXuHexKp6-GMz3HDNxhlTxZdBmedAdqHAoGLU5Qj4u7OUKEZzHBzzn55mU86YgQY20Ze7q4jGlVs4Jm3_4ROzM2s8m9siyXJrybPv_v3UBwRmJZSeGMBaGu8GsbDRFS0iCXcJmo-CMVb7mgfzDEDGUgmMHeFtn1r8bwZCXnW6LVQwRA_N/s2048/Neymar%20era%20Barceelona%20x%20Santos.jpg" alt="Neymar com a camisa do Santos">
+    </section>
+
+    <section id="quiz">
+      <h2>Quiz</h2>
+      <p>Em qual time o Neymar NÃO jogou profissionalmente?</p>
+      <div class="opcoes-quiz">
+        <button class="resposta" data-certa="false">
+          <img src="https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg" alt="">
+          <span>Barcelona FC</span>
+        </button>
+        <button class="resposta" data-certa="true">
+          <img src="https://www.mancity.com/dist/images/logos/crest.svg" alt="Logo do Manchester City">
+          <span>Manchester City</span>
+        </button>
+        <button class="resposta" data-certa="false">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Paris_Saint-Germain_F.C..webp" alt="">
+          <span>PSG</span>
+        </button>
+      </div>
+      <p id="resultado" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer>O maior ídolo do Brasil!</footer>
+</body>
+</html>
